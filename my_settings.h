@@ -35,7 +35,11 @@ typedef enum {
 typedef enum { STATEMENT_INSERT, STATEMENT_SELECT } StatementType;
 
 /* define executing results */
-typedef enum { EXECUTE_SUCCESS, EXECUTE_TABLE_FULL } ExecuteResult;
+typedef enum {
+    EXECUTE_SUCCESS,
+    EXECUTE_DUPLICATE_KEY,
+    EXECUTE_TABLE_FULL
+} ExecuteResult;
 
 /* define column sizes */
 #define COLUMN_USERNAME_SIZE 32
